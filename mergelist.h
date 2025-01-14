@@ -13,23 +13,57 @@ struct ListNode {
 class MergeList {
 public:
     ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
-        ListNode* curr = list1;
-        
-        while(curr!= nullptr){
-            ListNode* current = list2;
-            ListNode* nextval = curr->next;
 
-            while(current != nullptr && curr->val > current->val){
+        // Both list are sorted. Insert each item in list1 into the right spot
+        // in list2
+
+        ListNode* itemToInsert = list1;
+        
+        while(itemToInsert!= nullptr){
+            
+            // Since we are going to remove the item from list1 then 
+            // lets keep a pointer to the next itme 
+            ListNode* nextval = itemToInsert->next;
+            itemToInsert->next = nullptr;
+
+            // Find the right spot to inser the item:
+            // Insert it BEFORE the first item with higher value 
+            // because this is a singly linked list we need to keep track 
+            // of the item before current
+
+            ListNode* current = list2;
+            ListNode* prev = nullptr;
+
+            while(current != nullptr){
+
+                if(current->val >= itemToInsert->val) {
+                    break;
+                }
+
+                prev = current;
                 current = current->next;
             }
-            std::cout << "Current: " << current->val;
 
-            ListNode* temp = current->next;
-            curr->next = temp;
-            current->next = curr;
-            curr = nextval;
+            // Beggining of list2 
+            if(!prev) {
+                ListNode* ln = list2;
+                list2 = itemToInsert;
+                itemToInsert->next = ln;
+            }
 
-            
+            // End of list2
+            if(!current) {
+                prev->next = itemToInsert;
+                itemToInsert->next = nullptr;
+            }
+
+            // Insert between prev and current
+            if(prev && current) {
+                itemToInsert->next = current;
+                prev->next = itemToInsert;
+            }
+
+            itemToInsert = nextval;
         }
        
         return list2;
