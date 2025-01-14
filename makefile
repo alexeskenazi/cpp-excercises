@@ -7,7 +7,7 @@ all: main
 
 # Specify the object files that the target depends on
 # Also specify the object files needed to create the executable
-main : main.o 
+main : main.o *.h
 	$(CXX) $(CXXFLAGS) main.o -o main 
 
 # Specify the object files and executables that are generated
