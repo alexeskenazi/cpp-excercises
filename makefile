@@ -14,3 +14,6 @@ main : main.o *.h
 # and need to be removed to re-compile the whole thing
 clean:
 	rm -f *.o main
+
+run: clean main
+	./main
