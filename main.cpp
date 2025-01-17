@@ -1,23 +1,23 @@
 #include <iostream>
 #include <cstring>
-#include "reverse-string.h"
+
 #include "valid-parentheses.h"
 #include "mergelist.h"
+#include "buy-chocolate.h"
 
 
 
 int main() {
 
-    ReverseString rs;
-    rs.checks();
+    Chocolate choc;
+    choc.checks();
 
-    
-    ValidParentheses vp;
-    vp.checks();
+    // ValidParentheses vp;
+    // vp.checks();
 
 
-    MergeList ml;
-    ml.checks();
+    // MergeList ml;
+    // ml.checks();
   
     return 0;
 }
