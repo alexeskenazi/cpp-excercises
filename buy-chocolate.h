@@ -62,10 +62,10 @@ class Chocolate {
             int output = buyChoco(prices, money);
 
             if( expectedOutput == output) {
-                std::cout << "passed 1" << std::endl;
+                std::cout << "BuyChoco: test 1 passed" << std::endl;
             }
             else {
-                std::cout << "failed got: " << output << " but  expected: " << expectedOutput<< std::endl;
+                std::cout << "BuyChoco:  test 1 failed got: " << output << " but  expected: " << expectedOutput<< std::endl;
             }
 
 
@@ -76,10 +76,10 @@ class Chocolate {
             output = buyChoco(prices, money);
 
             if( expectedOutput == output) {
-                std::cout << "passed 2" << std::endl;
+                std::cout << "BuyChoco: test 2 passed" << std::endl;
             }
             else {
-                std::cout << "failed 2 got: " << output << " but  expected: " << expectedOutput<< std::endl;
+                std::cout << "BuyChoco: test 2 failed got: " << output << " but  expected: " << expectedOutput<< std::endl;
             }
 
 
@@ -90,10 +90,10 @@ class Chocolate {
             output = buyChoco(prices, money);
 
             if( expectedOutput == output) {
-                std::cout << "passed 3" << std::endl;
+                std::cout << "BuyChoco: test 3 passed" << std::endl;
             }
             else {
-                std::cout << "failed 3 got: " << output << " but  expected: " << expectedOutput<< std::endl;
+                std::cout << "BuyChoco: test 3 failed got: " << output << " but  expected: " << expectedOutput<< std::endl;
             }
         }
 };
