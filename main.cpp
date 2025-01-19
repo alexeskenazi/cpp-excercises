@@ -5,6 +5,7 @@
 #include "mergelist.h"
 #include "buy-chocolate.h"
 #include "two-sum.h"
+#include "length-of-last-word.h"
 
 
 
@@ -22,6 +23,9 @@ int main() {
 
     MergeList ml;
     ml.checks();
+
+    LengthOfLastWord lw;
+    lw.checks();
   
     return 0;
 }
