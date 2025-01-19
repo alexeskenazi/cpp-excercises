@@ -1,5 +1,8 @@
 #pragma once
 #include <iostream>
+#include <cassert>
+using namespace std;
+
 // PROMPT: Merge Two Sorted Lists
 // You are given the heads of two sorted linked lists list1 and list2.
 // Merge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists.
@@ -101,10 +104,13 @@ public:
         ListNode* lresult = ml.mergeTwoLists(list1, list2);
 
         ListNode* curr = lresult;
+        string outputAsString  = "";
         while(curr ) {
-            cout << curr->val << ", ";
+            outputAsString.push_back(curr->val);
             curr = curr->next;
         }
+        assert(outputAsString=="112344");
+        cout << "MergeList: test 1 passed." << endl;
 
     }
 

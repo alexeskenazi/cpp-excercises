@@ -10,12 +10,10 @@ class LengthOfLastWord {
     public:
         
         int lengthOfLastWord(string s) {
-            int end = 0;
             int wordLen = 0;
             for(int i = 0; i < s.size(); ++i){
                 int j = s.size() - i - 1;
                 if (s[j] == ' '){
-                    end = j-1;
                     if(wordLen > 0){
                         break;
                     }
