@@ -10,12 +10,26 @@ class LengthOfLastWord {
     public:
         
         int lengthOfLastWord(string s) {
-            int output = 0;
-
-            return output;
+            int end = 0;
+            int wordLen = 0;
+            for(int i = 0; i < s.size(); ++i){
+                int j = s.size() - i - 1;
+                if (s[j] == ' '){
+                    end = j-1;
+                    if(wordLen > 0){
+                        break;
+                    }
+                    continue;
+                    
+                }
+                
+                wordLen++; 
+            }
+            return wordLen;
         }
 
         void checks() {
+
             string input;
             int expectedOutput;
             int output;
@@ -38,9 +52,7 @@ class LengthOfLastWord {
             expectedOutput = 6;
             output = lengthOfLastWord(input);
             assert(output==expectedOutput);
-            cout << "LengthOfLastWord: test 3 passed." << endl;
-
-           
+            cout << "LengthOfLastWord: test 3 passed." << endl;   
         }
 };
 
