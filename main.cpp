@@ -7,10 +7,14 @@
 #include "buy-chocolate.h"
 #include "two-sum.h"
 #include "length-of-last-word.h"
+#include "roman-to-integer.h"
 
 
 
 int main() {
+
+    RomanToInteger ri;
+    ri.checks();
 
     PalindromeNumber pn;
     pn.checks();
