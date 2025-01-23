@@ -2,6 +2,7 @@
 #include <cstring>
 
 #include "valid-parentheses.h"
+#include "palindrome-number.h"
 #include "mergelist.h"
 #include "buy-chocolate.h"
 #include "two-sum.h"
@@ -11,6 +12,9 @@
 
 int main() {
 
+    PalindromeNumber pn;
+    pn.checks();
+
     TwoSum ts;
     ts.checks();
 
@@ -19,7 +23,6 @@ int main() {
 
     ValidParentheses vp;
     vp.checks();
-
 
     MergeList ml;
     ml.checks();
