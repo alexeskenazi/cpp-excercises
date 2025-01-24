@@ -106,11 +106,12 @@ public:
         ListNode* curr = lresult;
         string outputAsString  = "";
         while(curr ) {
-            outputAsString.push_back(curr->val);
+            outputAsString.push_back(curr->val + '0');
             curr = curr->next;
         }
         assert(outputAsString=="112344");
         cout << "MergeList: test 1 passed." << endl;
+        assert(outputAsString=="112344");
 
     }
 
