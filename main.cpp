@@ -8,10 +8,14 @@
 #include "two-sum.h"
 #include "length-of-last-word.h"
 #include "roman-to-integer.h"
+#include "plus-one.h"
 
 
 
 int main() {
+
+    PlusOne po;
+    po.checks();
 
     RomanToInteger ri;
     ri.checks();
