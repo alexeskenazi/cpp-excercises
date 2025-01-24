@@ -9,10 +9,14 @@
 #include "length-of-last-word.h"
 #include "roman-to-integer.h"
 #include "plus-one.h"
+#include "longest-common-prefix.h"
 
 
 
 int main() {
+
+    LongestCommonPrefix lcp;
+    lcp.checks();
 
     PlusOne po;
     po.checks();
