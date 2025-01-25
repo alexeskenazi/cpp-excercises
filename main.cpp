@@ -11,10 +11,14 @@
 #include "plus-one.h"
 #include "longest-common-prefix.h"
 #include "merge-sorted-array.h"
+#include "squares-sorted-array.h"
 
 
 
 int main() {
+
+    SquaresSortedArray sa;
+    sa.checks();
 
     MergeSortedArray ms;
     ms.checks();
