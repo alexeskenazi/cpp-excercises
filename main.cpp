@@ -10,10 +10,14 @@
 #include "roman-to-integer.h"
 #include "plus-one.h"
 #include "longest-common-prefix.h"
+#include "merge-sorted-array.h"
 
 
 
 int main() {
+
+    MergeSortedArray ms;
+    ms.checks();
 
     LongestCommonPrefix lcp;
     lcp.checks();
