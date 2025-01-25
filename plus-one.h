@@ -12,7 +12,6 @@ class PlusOne {
         
         vector<int> plusOne(vector<int>& digits) {
             int carry = 0;
-            int pos = 0;
             vector<int> output;
             for(int i = digits.size()-1; i >= 0; --i) {
                 
