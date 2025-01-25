@@ -12,10 +12,14 @@
 #include "longest-common-prefix.h"
 #include "merge-sorted-array.h"
 #include "squares-sorted-array.h"
+#include "remove-dups-sorted-list.h"
 
 
 
 int main() {
+
+    RemoveDuplicatesFromSortedList rd;
+    rd.checks();
 
     SquaresSortedArray sa;
     sa.checks();
