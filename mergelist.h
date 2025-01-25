@@ -3,33 +3,14 @@
 #include <cassert>
 using namespace std;
 
-// PROMPT: Merge Two Sorted Lists
-// You are given the heads of two sorted linked lists list1 and list2.
-// Merge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists.
-// Return the head of the merged linked list.
-//
-// EXMAPLES:
-// Input: list1 = [1,2,4], list2 = [1,3,4]
-// Output: [1,1,2,3,4,4]
-// Example 2:
-
-// Input: list1 = [], list2 = []
-// Output: []
-// Example 3:
-
-// Input: list1 = [], list2 = [0]
-// Output: [0]
-
- //* Definition for singly-linked list.
-struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode() : val(0), next(nullptr) {}
-    ListNode(int x) : val(x), next(nullptr) {}
-    ListNode(int x, ListNode *next) : val(x), next(next) {}
-};
-
 class MergeList {
+    struct ListNode {
+        int val;
+        ListNode *next;
+        ListNode() : val(0), next(nullptr) {}
+        ListNode(int x) : val(x), next(nullptr) {}
+        ListNode(int x, ListNode *next) : val(x), next(next) {}
+    };
 public:
     ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
 
@@ -111,8 +92,23 @@ public:
         }
         assert(outputAsString=="112344");
         cout << "MergeList: test 1 passed." << endl;
-        assert(outputAsString=="112344");
-
     }
 
 };
+
+// PROMPT: Merge Two Sorted Lists
+// You are given the heads of two sorted linked lists list1 and list2.
+// Merge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists.
+// Return the head of the merged linked list.
+//
+// EXMAPLES:
+// Input: list1 = [1,2,4], list2 = [1,3,4]
+// Output: [1,1,2,3,4,4]
+// Example 2:
+
+// Input: list1 = [], list2 = []
+// Output: []
+// Example 3:
+
+// Input: list1 = [], list2 = [0]
+// Output: [0]
