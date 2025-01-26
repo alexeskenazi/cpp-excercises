@@ -1,16 +1,10 @@
 #pragma once
 #include <iostream>
 #include <cassert>
+#include "utils/linked-list.h"
 using namespace std;
 
 class MergeList {
-    struct ListNode {
-        int val;
-        ListNode *next;
-        ListNode() : val(0), next(nullptr) {}
-        ListNode(int x) : val(x), next(nullptr) {}
-        ListNode(int x, ListNode *next) : val(x), next(next) {}
-    };
 public:
     ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
 
@@ -71,26 +65,13 @@ public:
 
     void checks() {
         
-        MergeList ml;
+        ListNode* list1 = LinkedList::createLinkedList({1,2,4});
+        ListNode* list2 = LinkedList::createLinkedList({1,3,4});
+        ListNode* expectedOutput = LinkedList::createLinkedList({1, 1, 2, 3, 4, 4});
 
-        ListNode* list1 = new ListNode(1);
-        list1->next = new ListNode(2);
-        list1->next->next = new ListNode(4);
+        ListNode* output = mergeTwoLists(list1, list2);
 
-        ListNode* list2 = new ListNode(1);
-        list2->next = new ListNode(3);
-        list2->next->next = new ListNode(4);
-
-
-        ListNode* lresult = ml.mergeTwoLists(list1, list2);
-
-        ListNode* curr = lresult;
-        string outputAsString  = "";
-        while(curr ) {
-            outputAsString.push_back(curr->val + '0');
-            curr = curr->next;
-        }
-        assert(outputAsString=="112344");
+        assert(LinkedList::compareLists(output, expectedOutput));
         cout << "MergeList: test 1 passed." << endl;
     }
 
