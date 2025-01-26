@@ -13,6 +13,7 @@
 #include "merge-sorted-array.h"
 #include "squares-sorted-array.h"
 #include "remove-dups-sorted-list.h"
+#include "remove-dups-sorted-list2.h"
 
 
 
@@ -20,6 +21,9 @@ int main() {
 
     RemoveDuplicatesFromSortedList rd;
     rd.checks();
+
+    RemoveDuplicatesFromSortedList2 rd2;
+    rd2.checks();
 
     SquaresSortedArray sa;
     sa.checks();
