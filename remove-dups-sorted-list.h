@@ -28,15 +28,17 @@ public:
          
         ListNode* list1 = LinkedList::createLinkedList({1,2,3,3});
         ListNode* expectedOutput = LinkedList::createLinkedList({1,2,3});
+        ListNode* output = deleteDuplicates(list1);
 
-        assert(LinkedList::compareLists(list1, expectedOutput));
+        assert(LinkedList::compareLists(output, expectedOutput));
         cout << "RemoveDuplicatesFromSortedList: test 1 passed." << endl;
 
 
         list1 = LinkedList::createLinkedList({1,1,2,2,2,3,3,3});
         expectedOutput = LinkedList::createLinkedList({1,2,3});
+        output = deleteDuplicates(list1);
 
-        assert(LinkedList::compareLists(list1, expectedOutput));
+        assert(LinkedList::compareLists(output, expectedOutput));
         cout << "RemoveDuplicatesFromSortedList: test 2 passed." << endl;
 
     }
