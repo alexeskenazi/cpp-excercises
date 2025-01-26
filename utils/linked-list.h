@@ -30,9 +30,9 @@ public:
         return head;
     }
 
-    static bool compareLists(const ListNode* list1, ListNode* list2) {
-        ListNode* curr1 = nullptr;
-        ListNode* curr2 = nullptr;
+    static bool compareLists(ListNode* list1, ListNode* list2) {
+        ListNode* curr1 = list1;
+        ListNode* curr2 = list2;
 
         while(curr1 || curr2) {
 
