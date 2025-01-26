@@ -1,17 +1,11 @@
 #pragma once
 #include <iostream>
 #include <cassert>
+#include "utils/linked-list.h"
 using namespace std;
 
-
 class RemoveDuplicatesFromSortedList {
-    struct ListNode {
-        int val;
-        ListNode *next;
-        ListNode() : val(0), next(nullptr) {}
-        ListNode(int x) : val(x), next(nullptr) {}
-        ListNode(int x, ListNode *next) : val(x), next(next) {}
-    };
+
 
 public:
     ListNode* deleteDuplicates(ListNode* head) {
@@ -31,24 +25,19 @@ public:
     }
 
     void checks() {
-        
-        // Build the input list with duplicates
-        ListNode* list1 = new ListNode(1);
-        list1->next = new ListNode(1);
-        list1->next->next = new ListNode(2);
-        list1->next->next->next = new ListNode(3);
-        list1->next->next->next->next = new ListNode(3);
+         
+        ListNode* list1 = LinkedList::createLinkedList({1,2,3,3});
+        ListNode* expectedOutput = LinkedList::createLinkedList({1,2,3});
 
-        ListNode* lresult = deleteDuplicates(list1);
-
-        ListNode* curr = lresult;
-        string outputAsString  = "";
-        while(curr ) {
-            outputAsString.push_back(curr->val + '0');
-            curr = curr->next;
-        }
-        assert(outputAsString=="123");
+        assert(LinkedList::compareLists(list1, expectedOutput));
         cout << "RemoveDuplicatesFromSortedList: test 1 passed." << endl;
+
+
+        list1 = LinkedList::createLinkedList({1,1,2,2,2,3,3,3});
+        expectedOutput = LinkedList::createLinkedList({1,2,3});
+
+        assert(LinkedList::compareLists(list1, expectedOutput));
+        cout << "RemoveDuplicatesFromSortedList: test 2 passed." << endl;
 
     }
 
