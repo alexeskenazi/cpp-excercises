@@ -55,4 +55,41 @@ public:
     }
 
 
+
 };
+
+
+
+
+////////
+
+void testCreateLinkedList() {
+    vector<int> input = {1, 2, 3, 4, 5};
+    ListNode* head = LinkedList::createLinkedList(input);
+
+    ListNode* current = head;
+    for (int val : input) {
+        if (current == nullptr || current->val != val) {
+            cout << "testCreateLinkedList failed!" << endl;
+            return;
+        }
+        current = current->next;
+    }
+    cout << "testCreateLinkedList passed!" << endl;
+}
+
+void testCompareLists() {
+    vector<int> input1 = {1, 2, 3, 4, 5};
+    vector<int> input2 = {1, 2, 3, 4, 5};
+    vector<int> input3 = {1, 2, 3, 4, 6};
+
+    ListNode* list1 = LinkedList::createLinkedList(input1);
+    ListNode* list2 = LinkedList::createLinkedList(input2);
+    ListNode* list3 = LinkedList::createLinkedList(input3);
+
+    if (LinkedList::compareLists(list1, list2) && !LinkedList::compareLists(list1, list3)) {
+        cout << "testCompareLists passed!" << endl;
+    } else {
+        cout << "testCompareLists failed!" << endl;
+    }
+}

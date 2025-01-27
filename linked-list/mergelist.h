@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 #include <cassert>
-#include "utils/linked-list.h"
+#include "../utils/linked-list.h"
 using namespace std;
 
 class MergeList {

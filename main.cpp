@@ -1,9 +1,10 @@
 #include <iostream>
 #include <cstring>
 
+#include "utils/linked-list.h"
 #include "valid-parentheses.h"
 #include "palindrome-number.h"
-#include "mergelist.h"
+#include "linked-list/mergelist.h"
 #include "buy-chocolate.h"
 #include "two-sum.h"
 #include "length-of-last-word.h"
@@ -12,8 +13,8 @@
 #include "longest-common-prefix.h"
 #include "merge-sorted-array.h"
 #include "squares-sorted-array.h"
-#include "remove-dups-sorted-list.h"
-#include "remove-dups-sorted-list2.h"
+#include "linked-list/remove-dups-sorted-list.h"
+#include "linked-list/remove-dups-sorted-list2.h"
 
 
 
@@ -57,6 +58,9 @@ int main() {
 
     LengthOfLastWord lw;
     lw.checks();
+
+    testCreateLinkedList();
+    testCompareLists();
   
     return 0;
 }
