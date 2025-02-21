@@ -15,10 +15,14 @@
 #include "squares-sorted-array.h"
 #include "linked-list/remove-dups-sorted-list.h"
 #include "linked-list/remove-dups-sorted-list2.h"
+#include "kItemsWithMaximumSum.h"
 
 
 
 int main() {
+
+    KItemsWithMaximumSum ki;
+    ki.checks();    
 
     RemoveDuplicatesFromSortedList rd;
     rd.checks();
