@@ -9,6 +9,19 @@ This repository contains various C++ exercises to practice and improve your prog
 3. **Length of Last Word** (`length-of-last-word.h`)
 4. **Binary Tree Preorder Traversal** (`binary-tree-preorder.h`)
 5. **Valid Parentheses** (`valid-parentheses.h`)
+6. **K Items With Maximum Sum** (`kItemsWithMaximumSum.h`)
+7. **Check if Bitwise OR Has Trailing Zeros** (`has-trailing-zeros.h`)
+8. **Count Odd Numbers in an Interval Range** (`count-odds.h`)
+9. **Buy Chocolates** (`buy-chocolate.h`)
+10. **Reverse String** (`reverse-string.h`)
+11. **Palindrome Number** (`palindrome-number.h`)
+12. **Two Sum** (`two-sum.h`)
+13. **Roman to Integer** (`roman-to-integer.h`)
+14. **Plus One** (`plus-one.h`)
+15. **Squares of a Sorted Array** (`squares-sorted-array.h`)
+16. **Remove Duplicates from Sorted List** (`linked-list/remove-dups-sorted-list.h`)
+17. **Remove Duplicates from Sorted List II** (`linked-list/remove-dups-sorted-list2.h`)
+18. **Binary Tree Preorder Traversal** (`binary-tree-preorder.h`)
 
 ## Building and Running
 
