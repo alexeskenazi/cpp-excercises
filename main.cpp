@@ -16,10 +16,14 @@
 #include "linked-list/remove-dups-sorted-list.h"
 #include "linked-list/remove-dups-sorted-list2.h"
 #include "kItemsWithMaximumSum.h"
+#include "count-odds.h"
 
 
 
 int main() {
+
+    CountOdds co;
+    co.checks();
 
     KItemsWithMaximumSum ki;
     ki.checks();    
