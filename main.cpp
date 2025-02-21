@@ -18,10 +18,12 @@
 #include "kItemsWithMaximumSum.h"
 #include "count-odds.h"
 #include "has-trailing-zeros.h"
-
-
+#include "binary-tree-preorder.h"
 
 int main() {
+
+    BinaryTreePreorderTraversal bt;
+    bt.checks();
 
     HasTrailingZeros htz;
     htz.checks();

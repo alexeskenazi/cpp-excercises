@@ -20,7 +20,6 @@ class BinaryTreePreorderTraversal {
     public:
         
         vector<int> preorderTraversal(TreeNode* root) {
-            TreeNode* current = root;
             vector<int> output;
             if(root!=nullptr){
                 preorderHelper(root, output);
@@ -39,6 +38,21 @@ class BinaryTreePreorderTraversal {
         }
 
         void checks() {
+            
+            TreeNode* root = new TreeNode(1);
+            root->right = new TreeNode(2);
+            root->right->left = new TreeNode(3);
+            vector<int> expectedOutput = {1, 2, 3};
+            vector<int> output = preorderTraversal(root);
+            assert(output==expectedOutput);
+            cout << "BinaryTreePreorderTraversal: test 1 passed." << endl;
+
+            root = new TreeNode(1);
+            expectedOutput = {1};
+            output = preorderTraversal(root);
+            assert(output==expectedOutput);
+            cout << "BinaryTreePreorderTraversal: test 2 passed." << endl;
+            
            
         }
 };
