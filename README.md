@@ -1,6 +1,6 @@
 # C++ Exercises
 
-This repository contains various C++ exercises to practice and improve your programming skills. Each exercise is implemented in a separate header file with corresponding test cases.
+This repository contains various C++ exercises to practice and improve your programming skills. Each exercise is implemented in a separate header file with corresponding test cases. The solutions are the ones I came up with, there may be other solutions that I have not considered. Ping me if you have questions!
 
 ## Exercises
 
