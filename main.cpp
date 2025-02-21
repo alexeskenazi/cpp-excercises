@@ -17,10 +17,14 @@
 #include "linked-list/remove-dups-sorted-list2.h"
 #include "kItemsWithMaximumSum.h"
 #include "count-odds.h"
+#include "has-trailing-zeros.h"
 
 
 
 int main() {
+
+    HasTrailingZeros htz;
+    htz.checks();
 
     CountOdds co;
     co.checks();
