@@ -19,8 +19,12 @@
 #include "count-odds.h"
 #include "has-trailing-zeros.h"
 #include "binary-tree-preorder.h"
+#include "remove-duplicates-sorted-array.h"
 
 int main() {
+
+    RemoveDuplicatesSortedArray rdsa;
+    rdsa.checks();
 
     BinaryTreePreorderTraversal bt;
     bt.checks();
