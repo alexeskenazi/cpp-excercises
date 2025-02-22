@@ -31,6 +31,19 @@ class RemoveDuplicatesSortedArray {
         return count;
     }
 
+    int removeDuplicates2(vector<int>& nums) {
+        int index = 0;
+        for(int i = 0; i < nums.size(); ++i){
+
+            if(nums[i] != nums[i+1]){
+                nums[index] = nums[i];
+                index++;    
+            }
+        }
+  
+        return index;
+    }
+
     void checks() {
         vector<int> nums = {1,1,2};
         int result = removeDuplicates(nums);
@@ -48,6 +61,23 @@ class RemoveDuplicatesSortedArray {
         assert(nums2[3] == 3);
         assert(nums2[4] == 4);
         cout << "removeDuplicates test 2  passed: " << endl;
+
+        vector<int> nums3 = {1,1,2};
+        int result3 = removeDuplicates2(nums3);
+        assert(result3 == 2);
+        assert(nums3[0] == 1);
+        assert(nums3[1] == 2);
+        cout << "removeDuplicates2 test 1  passed: " << endl;
+        
+        vector<int> nums4 = {0,0,1,1,1,2,2,3,3,4};
+        int result4 = removeDuplicates2(nums4);
+        assert(result4 == 5);
+        assert(nums4[0] == 0);
+        assert(nums4[1] == 1);
+        assert(nums4[2] == 2);
+        assert(nums4[3] == 3);
+        assert(nums4[4] == 4);
+        cout << "removeDuplicates2 test 2  passed: " << endl;
 
     }
 };
