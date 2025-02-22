@@ -24,6 +24,7 @@ NO AI was used to solve these problems
 16. **Remove Duplicates from Sorted List** (`linked-list/remove-dups-sorted-list.h`)
 17. **Remove Duplicates from Sorted List II** (`linked-list/remove-dups-sorted-list2.h`)
 18. **Binary Tree Preorder Traversal** (`binary-tree-preorder.h`)
+19. **Remove Duplicates from Sorted Array** (`remove-duplicates-sorted-array.h`) - two solutions
 
 ## Building and Running
 
